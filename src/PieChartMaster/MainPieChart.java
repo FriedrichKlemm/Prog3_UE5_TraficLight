@@ -13,6 +13,6 @@ public class MainPieChart extends Application {
     public void start(Stage primaryStage) throws Exception {
         MasterStatisticsParameter1 bachelor = new MasterStatisticsParameter1(new Stage(), "Bachelor", 69);
         MasterStatisticsParameter1 other =new MasterStatisticsParameter1(new Stage(), "andere Studiengänge", 12);
-        GraficControler graficControler = new GraficControler(primaryStage, )
+        GraficControler graficControler = new GraficControler(primaryStage);
     }
 }

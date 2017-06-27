@@ -17,21 +17,15 @@ import java.util.List;
 /**
  * Created by Friedrich on 21.06.2017.
  */
-public class GraficControler extends Application implements ObserverInterface{
-    //List<MasterStatisticsParameter1> dataList;
-    ObservableList<MasterStatisticsParameter1> pieChartData;
+public class GraficControler implements OnSlideListener{
     private Group pieChart;
     private BorderPane borderPane;
     private Scene scene;
 
-    public GraficControler(Stage primaryStage, ObservableList<MasterStatisticsParameter1> dataList) {
-        this.pieChartData = dataList;
-        //this.dataList = dataList;
-        for (MasterStatisticsParameter1 m: pieChartData
-                ) {
-            m.addObserver(this);
 
-        }
+    public GraficControler(Stage primaryStage) {
+
+
 
         primaryStage.setTitle("PieChartStuff");
         pieChart = new Group();
@@ -51,20 +45,18 @@ public class GraficControler extends Application implements ObserverInterface{
 
     }
 
-    public void run(){
+
+    @Override
+    public void onSlide(double value) {
 
     }
 
     @Override
-    public void update() {
-        for (MasterStatisticsParameter1 m:
-             pieChartData) {
-
-        }
+    public void addOnSlideListener(OnSlideListener listener) {
     }
 
     @Override
-    public void start(Stage primaryStage) throws Exception {
+    public void update(double value) {
 
     }
 }

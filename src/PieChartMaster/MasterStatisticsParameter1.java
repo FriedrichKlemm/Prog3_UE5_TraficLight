@@ -56,7 +56,7 @@ public class MasterStatisticsParameter1 implements SubjectInterface {
     @Override
     public void notifyAllObserver() {
         for (GraficControler observer : observerList) {
-            observer.update();
+            observer.update(valueOfSlider);
         }
 
     }
